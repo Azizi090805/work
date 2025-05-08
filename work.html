@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RWD回應式網頁切版</title>
+  <style>
+    .headline {
+      font-size: 30px;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .list {
+      display: flex; 
+      justify-content: center;
+    }
+
+    .item {
+      background-color: rgb(90, 32, 165);
+      flex: none;
+      width: 280px;
+      margin: 10px;
+    }
+
+    
+    @media only screen and (max-width: 1250px) {
+      .list {
+        flex-wrap: wrap;
+      }
+
+      .item {
+        width: 45%;
+      }
+    }
+
+    
+    @media only screen and (max-width: 500px) {
+      .item {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="headline">這是我關於運動的興趣</div>
+
+  <div class="list">
+    <div class="item">1.足球 : 我喜歡團隊合作的感覺</div>
+    <div class="item">2.排球 ：我喜歡團隊合作和比賽的樂趣</div>
+    <div class="item">3.游泳：讓我放鬆，也對身體很好</div>
+  </div>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>花卉展示</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background-color: rgba(255, 255, 255, 0);
+      text-align: center;
+    }
+    .container {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 50px;
+    }
+    .card {
+      background-color: #541b8a;
+      padding: 10px;
+      border-radius: 8px;
+      width: 150px;
+    }
+    .card h3 {
+      margin: 10px 0;
+      font-size: 18px;
+    }
+    .card img {
+      width: 100%;
+      height: auto;
+      border-radius: 5px;
+    }
+    .box {
+        flex: 1;
+        background-color: #550c5fc5;
+        padding: 20px;
+        text-align: center;
+        border-radius: 8px;
+      }
+  </style>
+</head>
+<body>
+
+    <div class="nav">
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        <div class="list" id="menu">
+            <span>1.選項</span>
+            <span>2.選項</span>
+            <span>3.選項</span>
+        </div>
+    </div>
+
+  <div class="container">
+    <div class="card">
+      <h3>1.足球</h3>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxd3v1W5jXize7RpjoR83XlhSovo46df_7dw&s" alt="足球">
+      
+    </div>
+    <div class="card">
+      <h3>2.排球</h3>
+      <img src="https://c8.alamy.com/comp/K7RM64/shohei-yamamoto-jpn-september-16-2017-volleyball-fivb-world-grand-K7RM64.jpg" alt="排球">
+    </div>
+    <div class="card">
+      <h3>3.游泳</h3>
+      <img src="https://images.pexels.com/photos/711187/pexels-photo-711187.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="游泳">
+    </div>
+  </div>
+
+</body>
+</html>
