@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <title>花卉介紹</title>
+    <style>
+        body {
+            font-family: 'Microsoft JhengHei', sans-serif;
+            line-height: 1.6;
+            background-color: #f9f9f9;
+            padding: 20px;
+        }
+        h1 {
+            color: #4CAF50;
+        }
+        label {
+            font-weight: bold;
+        }
+        select {
+            margin-top: 10px;
+            padding: 5px;
+        }
+        .info {
+            margin-top: 20px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            background-color: #fff;
+        }
+        .info img {
+            width: 300px;
+            height: auto;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+    </style>
+    <script>
+        function showInfo() {
+            const flower = document.getElementById("flowerSelect").value;
+            const infoBox = document.getElementById("flowerInfo");
+
+            if (flower === "hydrangea") {
+                infoBox.innerHTML = `
+                    <h2>繡球花 (Hydrangea)</h2>
+                    <p>2024繡球花季到啦！每年5月至6月初夏季節，粉藍、粉紫、粉紅等色彩繽紛的繡球花盛開，
+                    全台超過10處觀賞景點，如陽明山、竹子湖、大梯田花卉生態農場、明池森林遊樂區等，等你來探索！</p>
+                    <img src="https://today-obs.line-scdn.net/0hBKs0wMS1HWROSQz9ZHliM3YfERV9LwdtbCYCUD9MSlQ0ZV83cnpOB2hBEEhrKg40bnhXUD9JSlNiKVtmIQ/w644" alt="繡球花">
+                `;
+            } else if (flower === "oncidium") {
+                infoBox.innerHTML = `
+                    <h2>文心蘭 (Oncidium)</h2>
+                    <p>文心蘭，又稱跳舞蘭，花朵如黃裙飛舞，常見於花藝裝飾與展覽。它象徵快樂與祝福，適合送禮與擺設。</p>
+                    <img src="https://thumb.photo-ac.com/58/58c0cef1f00e20a432b84c2c4a5b87e8_t.jpeg" alt="文心蘭">
+                `;
+            } else {
+                infoBox.innerHTML = "";
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <h1>花卉介紹</h1>
+    <label for="flowerSelect">請選擇一種花卉：</label>
+    <select id="flowerSelect" onchange="showInfo()">
+        <option value="">-- 請選擇 --</option>
+        <option value="hydrangea">繡球花</option>
+        <option value="oncidium">文心蘭</option>
+    </select>
+
+    <div id="flowerInfo" class="info"></div>
+
+</body>
+</html>
